@@ -15,7 +15,7 @@ int main(int argc, char *argv[]){
 		bool result = true;
 		switch (get_operation()){
 			case 1:
-				mstr.add_u_to_end();
+				result = mstr.add_u_to_end_after_i();
 				break;
 			case 2:
 				mstr.double_after_m();
@@ -44,7 +44,7 @@ int main(int argc, char *argv[]){
 
 int get_operation(){
 	std::cout << "Operations:" << std::endl;
-	std::cout << "\t 1. Add 'U' to the end of the string" << std::endl;
+	std::cout << "\t 1. Add 'U' to the end of a string ending in 'I'" << std::endl;
 	std::cout << "\t 2. Repeat everything after 'M' at the end of the string" << std::endl;
 	std::cout << "\t 3. Replace 'III' in a string with 'U' at the same position" << std::endl;
 	std::cout << "\t 4. Remove 'UU' from a string" << std::endl;

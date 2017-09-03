@@ -54,9 +54,12 @@ MUString::MUString(std::string contents){
 	}
 }
 
-bool MUString::add_u_to_end(){
-	this->l.push_back(U);
-	return true;
+bool MUString::add_u_to_end_after_i(){
+	bool valid = this->l.back() == I;
+	if(valid){
+		this->l.push_back(U);
+	}
+	return valid;
 }
 
 bool MUString::double_after_m(){
